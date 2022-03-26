@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	aside .menu .active a {
+		@apply text-primary;
+	}
+	aside .menu .active a::before {
+		content: '';
+		@apply absolute inline-block w-[0.325rem] bg-primary h-full -left-2 rounded-r-md;
+	}
+	aside .collapse-arrow .collapse-title:after {
+		top: 1rem;
+		transform-origin: 100% 100%;
+	}
+	aside .collapse .collapse-content {
+		@apply p-0 hover:bg-transparent;
+	}
+	aside .collapse .collapse-title {
+		@apply min-h-0;
+	}
+	aside .collapse .collapse-content .menu {
+		@apply pl-6;
+	}
+}
